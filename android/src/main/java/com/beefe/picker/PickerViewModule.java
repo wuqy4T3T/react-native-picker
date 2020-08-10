@@ -6,13 +6,14 @@ import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.os.Build;
 
@@ -152,7 +153,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
         Activity activity = getCurrentActivity();
         if (activity != null && options.hasKey(PICKER_DATA)) {
             View view = activity.getLayoutInflater().inflate(R.layout.picker_view, null);
-            RelativeLayout barLayout = (RelativeLayout) view.findViewById(R.id.barLayout);
+            LinearLayout barLayout = (LinearLayout) view.findViewById(R.id.barLayout);
             TextView cancelTV = (TextView) view.findViewById(R.id.cancel);
             TextView titleTV = (TextView) view.findViewById(R.id.title);
             TextView confirmTV = (TextView) view.findViewById(R.id.confirm);

@@ -5,7 +5,7 @@
     android:background="#00000000">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/barLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,14 +16,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
             android:padding="9dp" />
 
         <TextView
             android:id="@+id/title"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:padding="9dp" />
+            android:gravity="center"
+            android:paddingVertical="9dp"
+            android:lines="1"
+            android:ellipsize="end"/>
 
         <TextView
             android:id="@+id/confirm"
@@ -32,9 +36,10 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="0dp"
             android:padding="9dp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/pickerLayout"
